@@ -4,42 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SRID | Iniciar sesión</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body class="login-body">
   <div class="login-container">
     <div class="login-card">
-      <h1>SRID</h1>
-      <p class="subtitle">Gestión de mantenimiento industrial</p>
+
+      <img src="assets/logo.png" alt="Logo SRID" class="logo-login">
 
       <form id="loginForm" class="login-form">
         <div class="form-group">
           <label for="usuario">Usuario</label>
-          <input
-            type="text"
-            id="usuario"
-            name="usuario"
-            placeholder="Ingrese su usuario"
-            autocomplete="username"
-          />
+          <input type="text" id="usuario" placeholder="Ingrese su usuario">
         </div>
 
         <div class="form-group">
           <label for="password">Contraseña</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            placeholder="Ingrese su contraseña"
-            autocomplete="current-password"
-          />
+          <input type="password" id="password" placeholder="Ingrese su contraseña">
         </div>
 
         <button type="submit" class="btn-primary">Iniciar sesión</button>
 
         <p id="mensaje" class="mensaje"></p>
       </form>
-
     </div>
   </div>
 

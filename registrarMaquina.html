@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registrar Máquina</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div>
+      <h2>Gestor de Mantenimiento</h2>
+    </div>
+    <div class="topbar-right">
+      <span id="usuarioActivo">Usuario</span>
+      <button class="btn-secondary" id="btnCerrarSesion">Cerrar sesión</button>
+    </div>
+  </header>
+
+  <main class="dashboard-container">
+    <section class="dashboard-card">
+      <h1>Registrar Máquina</h1>
+      <p class="subtitle">Ingresa la información de la nueva máquina</p>
+
+      <form id="formRegistrarMaquina" class="login-form">
+        <div class="form-group">
+          <label for="nombre">Nombre de la máquina</label>
+          <input type="text" id="nombre" placeholder="Ej: Torno CNC">
+        </div>
+
+        <div class="form-group">
+          <label for="codigo">Código</label>
+          <input type="text" id="codigo" placeholder="Ej: MQ-001">
+        </div>
+
+        <div class="form-group">
+          <label for="ubicacion">Ubicación</label>
+          <input type="text" id="ubicacion" placeholder="Ej: Planta A">
+        </div>
+
+        <div class="form-group">
+          <label for="estado">Estado</label>
+          <select id="estado">
+            <option value="Activa">Activa</option>
+            <option value="Mantenimiento">Mantenimiento</option>
+            <option value="Fuera de servicio">Fuera de servicio</option>
+          </select>
+        </div>
+
+        <p id="mensaje" class="mensaje"></p>
+
+        <button type="submit" class="btn-primary">Guardar máquina</button>
+      </form>
+    </section>
+
+    <section class="dashboard-card">
+      <h2>Máquinas registradas</h2>
+      <div id="listaMaquinas"></div>
+    </section>
+  </main>
+
+  <script src="js/registrarMaquina.js"></script>
+</body>
+</html>
