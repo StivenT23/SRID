@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SRID | Dashboard</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta charset="UTF-8">
+  <title>SRID</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+
+<body class="dashboard-body">
+
+  <!-- HEADER -->
   <header class="topbar">
-    <h1>SRID</h1>
+    <div class="topbar-left">
+      <img src="assets/logo.png" class="logo-mini">
+
+    </div>
+
     <div class="topbar-right">
       <span id="usuarioActivo"></span>
-      <button class="btn-secondary" onclick="cerrarSesion()">Cerrar sesión</button>
+      <button onclick="cerrarSesion()" class="btn-logout">Cerrar sesión</button>
     </div>
   </header>
 
+  <!-- CONTENIDO -->
   <main class="dashboard-container">
-    <section class="dashboard-card">
-      <h2>Bienvenido al sistema</h2>
-      <p id="saludoUsuario"></p>
-    </section>
 
-    <section class="dashboard-grid">
-      <a href="registrar-maquina.html" class="menu-card">Registrar máquina</a>
+    <div class="welcome-card">
+      <h1>Bienvenido al sistema</h1>
+      <p id="saludoUsuario"></p>
+    </div>
+
+    <div class="menu-grid">
+      <a href="registrarMaquina.html" class="menu-card">Registrar máquina</a>
       <a href="maquinas.html" class="menu-card">Ver máquinas</a>
       <a href="mantenimiento.html" class="menu-card">Mantenimiento</a>
       <a href="reportes.html" class="menu-card">Reportes</a>
-    </section>
+    </div>
+
   </main>
 
   <script src="js/auth.js"></script>
+
 </body>
 </html>
