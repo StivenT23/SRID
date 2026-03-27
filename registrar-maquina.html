@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registrar Máquina</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div>
+      <h2>Gestor de Mantenimiento</h2>
+    </div>
+    <div class="topbar-right">
+      <span id="usuarioActivo">Administrador</span>
+      <button class="btn-secondary" id="btnCerrarSesion">Cerrar sesión</button>
+    </div>
+  </header>
+
+  <main class="dashboard-container">
+    <section class="dashboard-card">
+      <h1>Registrar máquina</h1>
+      <p class="subtitle">
+        Ingresa nombre, tipo, modelo y frecuencia de mantenimiento.
+      </p>
+
+      <form id="formRegistrarMaquina" class="login-form">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" placeholder="Ej: Torno CNC">
+        </div>
+
+        <div class="form-group">
+          <label for="tipo">Tipo</label>
+          <input type="text" id="tipo" placeholder="Ej: Industrial">
+        </div>
+
+        <div class="form-group">
+          <label for="modelo">Modelo</label>
+          <input type="text" id="modelo" placeholder="Ej: XZ-300">
+        </div>
+
+        <div class="form-group">
+          <label for="frecuencia">Frecuencia de mantenimiento</label>
+          <input type="text" id="frecuencia" placeholder="Ej: Cada 30 días">
+        </div>
+
+        <p id="mensaje" class="mensaje"></p>
+
+        <button type="submit" class="btn-primary">Guardar máquina</button>
+      </form>
+    </section>
+
+    <section class="dashboard-card">
+      <h2>Máquinas registradas</h2>
+      <div id="listaMaquinas"></div>
+    </section>
+  </main>
+
+  <script src="js/registrar-maquina.js"></script>
+</body>
+</html>
